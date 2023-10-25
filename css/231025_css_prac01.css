@@ -1,0 +1,38 @@
+div {
+    height: 30px;
+}
+
+div.red {
+    width: 30px;
+    background-color: red;
+}
+
+div.orange {
+    width: 60px;
+    background-color: orange;
+}
+
+div.yellow {
+    width: 90px;
+    background-color: yellow;
+}
+
+div.green {
+    width: 120px;
+    background-color: green;
+}
+
+div.blue {
+    width: 150px;
+    background-color: blue;
+}
+
+div.darkblue {
+    width: 180px;
+    background-color: darkblue;
+}
+
+div.purple {
+    width: 210px;
+    background-color: purple;
+}
