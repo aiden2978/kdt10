@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <title>Font</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 40px;
+            background-color: yellow;
+        }
+
+        /* 링크 방식 + 폰트 패밀리 */
+        .google {
+            font-family: 'Do Hyeon', sans-serif;
+        }
+
+
+        /* font-face + 폰트 패밀리 */
+        @font-face {
+            font-family: 'Cafe24Supermagic-Bold-v1.0';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/Cafe24Supermagic-Bold-v1.0.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .noonnu {
+            font-family: 'Cafe24Supermagic-Bold-v1.0';
+        }
+    </style>
+</head>
+
+<body>
+    <!-- line height -->
+    <div class="box">
+        <p>text</p>
+    </div>
+
+    <!-- font-family -->
+    <div class="google">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi vero tenetur impedit quaerat, vel numquam
+            officia consequatur porro libero vitae dolores, enim deserunt reprehenderit sint placeat! Libero quo
+            laudantium aut.</p>
+    </div>
+
+    <div class="noonnu">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, architecto nemo cupiditate quo itaque saepe
+            exercitationem, accusamus minus et ratione quasi eaque sunt sapiente consectetur a tenetur dolorum laborum
+            quam?</p>
+    </div>
+</body>
+
+</html>
