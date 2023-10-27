@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설문조사 폼 만들기</title>
+    <style>
+        @font-face {
+            font-family: 'JeonjuCraftGoR';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/JeonjuCraftGoR.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        form {
+            width: 700px;
+            height: 60vh;
+            overflow-y: auto;
+            margin: auto;
+            padding: 10px;
+            border-top: 2px dashed black;
+            border-bottom: 2px dashed black;
+            background-color: aliceblue;
+        }
+
+        form * {
+            margin: 10px 5px 10px;
+            font-family: 'JeonjuCraftGoR';
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .name {
+            margin: 10px 0 0;
+        }
+
+        [type="email"] {
+            margin: 10px 0 0;
+        }
+
+        [type="button"] {
+            width: 10%;
+            height: 30px;
+            margin: 0 calc(45%)
+        }
+
+        .name:focus {
+            background-color: lightgray;
+        }
+
+        [type="email"]:focus {
+            background-color: lightgray;
+            margin: 10px 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <form>
+        <h1>설문조사</h1><br>
+        이름 <input type="text" name="이름" class="name"><br>
+        이메일 <input type="email" placeholder="email@example.com"><br><br>
+
+        <b>나이</b><br>
+        <input type="radio" name="age" value="10대" checked>10대
+        <input type="radio" name="age" value="20대">20대
+        <input type="radio" name="age" value="30대">30대
+        <input type="radio" name="age" value="40대">40대
+        <input type="radio" name="age" value="50대">50대
+        <input type="radio" name="age" value="60대 이상">60대 이상
+
+        <br><br>
+        <b>원하는 강의 (복수응답 가능합니다.)</b><br>
+        <input type="checkbox" name="wishlist" value="html" checked>HTML
+        <input type="checkbox" name="wishlist" value="css">CSS
+        <input type="checkbox" name="wishlist" value="javascript">JAVASCRIPT
+
+        <br><br>
+        <textarea cols="80" rows="10" placeholder="하고 싶은 말을 써주세요"></textarea><br>
+        <input type="button" value="제출" >
+    </form>
+</body>
+
+</html>

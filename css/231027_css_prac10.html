@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Sizing</title>
+    <style>
+        .box-sizing {
+            width: 100px;
+            height: 100px;
+            padding: 20px;
+            border: 15px solid red;
+            background-color: orange;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 요소의 내용만으로 크기 계산 -->
+    <div class="box-sizing" style="box-sizing: content-box;">content-box</div>
+    <!-- 요소 + padding + border로 크기 계산 -->
+    <div class="box-sizing" style="box-sizing: border-box;">border-box</div>
+</body>
+
+</html>

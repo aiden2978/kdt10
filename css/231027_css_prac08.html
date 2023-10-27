@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc 및 line-height 사용하기</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: aliceblue;
+        }
+
+        div {
+            /* line-height과 box-height이 동일할 때 세로 정렬 */
+            width: 10vw;
+            height: 10vw;
+            background-color: steelblue;
+            color: white;
+            margin: calc(50vh - 5vw) auto calc(50vh - 5vw);
+            text-align: center;
+            line-height: 10vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div>KDT</div>
+</body>
+
+</html>

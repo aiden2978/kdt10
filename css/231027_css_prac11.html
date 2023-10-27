@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 사라지게 하기</title>
+    <style>
+        div {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            color: white;
+            margin: 10px;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        /* display: none으로 설정 */
+        /* 속성도 사라지고 자리도 차지하지 않음 */
+        .display:hover {
+            display: none;
+        }
+
+        /* visibility: hidden으로 설정 */
+        /* 속성은 사라지나 자리는 차지 */
+        .visibility:hover {
+            visibility: hidden;
+        }
+
+        /* opacity: 0으로 설정 */
+        /* 속성 및 자리 유지 */
+        .opacity:hover {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 마우스를 움직일 때마다 감지하기 때문에 깜빡거리는 현상:
+        display:none과 visibility: hidden은 hover라는 속성도 사라지기 때문 -->
+    <div class="display">display</div>
+    <div class="visibility">visibility</div>
+    <div class="opacity">opacity</div>
+</body>
+
+</html>
