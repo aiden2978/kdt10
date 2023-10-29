@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index 실습</title>
+    <style>
+        .background {
+            position: relative;
+        }
+        
+        .circle {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        .white {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: white;
+            left: 50px;
+            bottom: 100px;
+            z-index: 2;
+        }
+
+        .black {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: black;
+            left: 50px;
+            bottom: 110px;
+            z-index: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <div class="grass"><img src="https://t4.ftcdn.net/jpg/05/25/18/23/240_F_525182382_LstOZhMFgRO4qKjfrNfD4pSN3QVrMVef.jpg" alt="grass" width="500px"></div>
+        <div class="circle" style="left: 30px; bottom: 60px; background-color: pink;"></div>
+        <div class="circle" style="left: 90px; bottom: 40px; background-color: violet;"></div>
+        <div class="circle" style="left: 140px; bottom: 20px; background-color: purple;"></div>
+        <div class="circle" style="left: 190px; bottom: 20px; background-color: coral;"></div>
+        <div class="circle" style="left: 240px; bottom: 20px; background-color: orangered;"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+    </div>
+</body>
+
+</html>

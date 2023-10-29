@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        .container {
+            position: relative;
+            width: 500px;
+            height: 300px;
+            background-color: aliceblue;
+        }
+
+        .container>div {
+            width: 100px;
+            height: 50px;
+        }
+
+        /* 자기 자신의 기존 위치를 기준으로 배치 */
+        .container div:first-child {
+            position: relative;
+            background-color: red;
+            top: 30px;
+            left: 30px;
+        }
+
+        /* 위치 상 부모 요소를 기준으로 배치 */
+        /* 위치상 부모 요소의 position을 relative로 설정 */
+        .container div:nth-child(2) {
+            position: absolute;
+            background-color: orange;
+            right: 30px;
+            bottom: 30px;
+        }
+
+        /* 뷰포트를 기준으로 배치 */
+        .container div:last-child {
+            position: fixed;
+            background-color: pink;
+            top: 100px;
+            right: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- position이 absolute나 fixed의 경우에는 display가 자동으로 block으로 설정 -->
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <!-- z-index가 높을수록 위로 배치 -->
+    <!-- position: static은 z-index의 영향을 받지 않음 -->
+    <hr>
+    <div class="container">
+        <div style="position: static; z-index: 999;">1</div>
+        <div style="z-index: 1;">2</div>
+        <div style="position: relative; z-index: 2; left: 400px; top: 200px;">3</div>
+    </div>
+</body>
+
+</html>

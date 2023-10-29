@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative/Absolute/Fixed</title>
+    <style>
+        .container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            border: 2px solid black;
+        }
+
+        .container div {
+            width: 100px;
+            height: 100px;
+        }
+
+        /* 자기 자신의 기존 위치를 기준으로 배치 */
+        .item1 {
+            position: relative;
+            left: 50px;
+            top: 30px;
+            background-color: orange;
+        }
+
+        /* 위치 상 부모 요소를 기준으로 배치 */
+        /* 위치상 부모 요소의 position을 relative로 설정 */
+        .item2 {
+            position: absolute;
+            right: 30px;
+            bottom: 100px;
+            background-color: yellow;
+        }
+
+        /* 뷰포트를 기준으로 배치 */
+        .item3 {
+            position: fixed;
+            right: 100px;
+            top: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="background-color: red;"></div>
+        <div class="item1">item1</div>
+        <div class="item2">item2</div>
+        <div class="item3">item3</div>
+    </div>
+</body>
+</html>
