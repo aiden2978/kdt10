@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-wrap</title>
+    <style>
+        .container {
+            margin: 20px;
+            width: 500px;
+            height: 500px;
+            background-color: whitesmoke;
+            display: flex;
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+        }
+
+        .container .item:nth-child(2n) {
+            background-color: darksalmon;
+        }
+
+        .container .item:nth-child(2n+1) {
+            background-color: olive;
+        }
+
+        .first {
+            flex-wrap: nowrap;
+        }
+
+        .second {
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container first">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    <div class="container second">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+
+</html>

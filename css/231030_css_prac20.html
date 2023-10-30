@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        .container {
+            position: relative;
+            background-color: whitesmoke;
+            width: 900px;
+            height: 600px;
+        }
+
+        img {
+            position: absolute;
+            width: 400px;
+            height: 250px;
+            transform: skewY(20deg);
+        }
+
+        #photo1 {
+            top: 200px;
+            left: 30px;
+            z-index: 3;
+        }
+
+        #photo2 {
+            top: 150px;
+            left: 250px;
+            z-index: 2;
+        }
+
+        #photo3 {
+            top: 100px;
+            left:470px;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img id="photo1" src="https://wallpapers.com/images/hd/national-geographic-desktop-8tfhfn2vqh9ua5pl.jpg" alt="photo1">
+        <img id="photo2" src="https://wallpapers.com/images/high/national-geographic-desktop-h7fm4kcxdpxq9e6z.webp" alt="photo2">
+        <img id="photo3" src="https://wallpapers.com/images/high/national-geographic-desktop-ailhwkfoamewc2de.webp" alt="photo3">
+    </div>
+</body>
+
+</html>

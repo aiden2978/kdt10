@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-wrap</title>
+    <style>
+        .container {
+            display: flex;
+            width: 500px;
+            height: 500px;
+            margin: 20px;
+            background-color: whitesmoke;
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+        }
+
+        .container .item:nth-child(3n) {
+            background-color: steelblue;
+        }
+
+        .container .item:nth-child(3n+1) {
+            background-color: darksalmon;
+        }
+
+        .container .item:nth-child(3n+2) {
+            background-color: olivedrab;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="flex-wrap: nowrap; align-items: center;">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    <div class="container" style="flex-direction: column; flex-wrap: nowrap; align-items: center;">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    <div class="container" style="flex-wrap: wrap; align-content: center;">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    <div class="container" style="flex-wrap: wrap; flex-direction: column; align-content: center;">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    <div class="container" style="flex-wrap: wrap; align-items: center;">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    <div class="container" style="flex-wrap: wrap; flex-direction: column; align-items: center;">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+
+</html>
