@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+    <script>
+        /* 자료형
+        기본
+            String
+            Number
+            Boolean
+            null
+            undefined
+        객체
+            Array
+            object */
+
+        // String
+        let myName = '길동';
+        let email = 'gildong@gmail.com';
+        let city = '서울';
+
+        console.log(myName);
+        console.log(email);
+        console.log(city);
+
+        // 문자와 변수를 동시에 출력
+        console.log('내 이름은', myName, '입니다.');
+        console.log('내 이름은 ' + myName + '입니다.');
+
+        // 백틱(``) 사용
+        console.log(`내 이름은 ${myName}입니다.`);
+        let gildong = `내 이름은 ${myName}입니다.`;
+        console.log(gildong);
+
+        // Number
+        let number = 123;
+        let opacity = 0.7;
+
+        console.log(number);
+        console.log(opacity);
+        
+        // NaN: not a number
+        console.log('apple'- 3);
+        console.log('123' - 3); //console.log 상에서 자료형 자동 변환
+
+        // Boolean
+        let checked = true;
+        let isShow = false;
+
+        console.log(checked);
+        console.log(isShow);
+
+        // Undefined
+        let undef;
+        console.log(undef);
+
+        // Null
+        let empty = null;
+        console.log(empty);
+
+        // Array
+        let fruits = ['orange', 'pineapple', 'grape', 'apple'];
+        let data = [1, 'gildong', false, null, undefined];
+
+        // 2차원 배열:[[], []]
+        console.log(fruits);
+        console.log(data);
+        console.log(fruits[0]);
+
+        // 맨 뒤에 추가 및 삭제
+        fruits.push('banana');
+        console.log(fruits);
+        fruits.pop();
+        console.log(fruits);
+
+        // 맨 앞에 추가 및 삭제
+        fruits.unshift('banana');
+        console.log(fruits);
+        fruits.shift();
+        console.log(fruits);
+
+        console.log(fruits.indexOf('orange'));
+        console.log(fruits.includes('orange'));
+        console.log(fruits.includes('banana'));
+
+        // Object
+        let cat = {
+            name: '나비',
+            age: 1,
+            isCute: true,
+            mew: function() {
+                console.log('냐옹');
+            }
+        }
+
+        console.log(cat);
+        console.log(cat.name);
+        console.log(cat.age);
+
+        // typeof
+        // typeof를 array나 null에 사용하면 object가 나옴
+        console.log(typeof "문자열");
+        console.log(typeof 123);
+        console.log(typeof true);
+        console.log(typeof cat);
+        console.log(typeof fruits);
+        console.log(typeof null);
+        console.log(typeof undefined);
+        console.log('typeof를 array나 null에 사용하면', typeof {}, '결과를 얻을 수 있다');
+
+        // 형변환
+        // let mathScore = prompt('수학 점수를 입력하세요');
+        // let engScore = prompt('영어 점수를 입력하세요');
+
+        // prompt로 입력 받은 값은 문자로 저장이 되기 때문에 
+        // 80 + 90은 8090으로 저장됨
+        // let avg = (mathScore + engScore) / 2;
+        // console.log(avg)
+
+        // 값 -> 문자 String(), toString()
+        let str1 = true;
+        let str2 = 123;
+        let str3 = null;
+
+        console.log(typeof String(str1));
+        console.log(typeof String(str2));
+        console.log(typeof String(str3));
+
+        console.log(typeof str1.toString());
+        console.log(typeof str2.toString());
+        // toString()의 경우 null이나 undefined에는 사용할 수 없음
+        // console.log(typeof str3.toString());
+
+        // 값 -> 숫자 Number()
+        let num1 = true;
+        let num2 = false;
+        let num3 = "123.4";
+        let num4 = "abc";
+
+        console.log(typeof Number(num1));
+        console.log(typeof Number(num2));
+        console.log(typeof Number(num3));
+        console.log(typeof Number(num4));
+
+        console.log(Number(num1));
+        console.log(Number(num2));
+        console.log(Number(num3));
+        console.log(Number(num4));
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

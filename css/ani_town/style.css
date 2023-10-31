@@ -7,15 +7,11 @@ body {
 }
 
 section {
+  position: absolute;
   width: 1050px;
   height: 675px;
-}
-
-section .city {
-  display: flex;
-  position: relative;
-  bottom: 5%;
-  justify-content: center;
+  top: calc(50% - 337.5px);
+  left: calc(50% - 525px);
 }
 
 section .sky {
@@ -177,6 +173,7 @@ section .sky .cloud_2 {
 section .city .city_img {
   width: 65%;
   position: absolute;
+  left: 17.5%;
   bottom: 5%;
 }
 
