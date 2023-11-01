@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick</title>
+    <script>
+        function add() {
+            let num1 = prompt('첫번째 숫자를 입력해주세요');
+            let num2 = prompt('두번째 숫자를 입력해주세요');
+            let result = Number(num1) + Number(num2);
+            alert(num1 + ' 더하기 ' + num2 + '은(는) ' + result + '입니다.');
+        }
+
+        function sub() {
+            let num1 = prompt('첫번째 숫자를 입력해주세요');
+            let num2 = prompt('두번째 숫자를 입력해주세요');
+            let result = Number(num1) - Number(num2);
+            alert(num1 + ' 빼기 ' + num2 + '은(는) ' + result + '입니다.');
+        }
+
+        function mul() {
+            let num1 = prompt('첫번째 숫자를 입력해주세요');
+            let num2 = prompt('두번째 숫자를 입력해주세요');
+            let result = Number(num1) * Number(num2);
+            alert(num1 + ' 곱하기 ' + num2 + '은(는) ' + result + '입니다.');
+        }
+
+        function divide() {
+            let num1 = prompt('첫번째 숫자를 입력해주세요');
+            let num2 = prompt('두번째 숫자를 입력해주세요');
+            let result = Number(num1) / Number(num2);
+            alert(num1 + ' 나누기 ' + num2 + '은(는) ' + result + '입니다.');
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="add();">더하기</button>
+    <button onclick="sub();">빼기</button>
+    <button onclick="mul();">곱하기</button>
+    <button onclick="divide();">나누기</button>
+</body>
+
+</html>

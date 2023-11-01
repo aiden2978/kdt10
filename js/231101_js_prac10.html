@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continue 실습</title>
+    <script>
+        let n = Number(prompt('정수 n을 입력하세요'));
+        let sum = 0;
+
+        // for문
+        for (let i = 0; i <= n; i++) {
+            if (i % 2 == 0 || i % 3 == 0) {
+                sum += i;
+            }
+        }
+
+        console.log(sum);
+
+        // while문
+        let i2 = 0;
+        let sum2 = 0;
+
+        while (i2 <= n) {
+            if (i2 % 2 == 0 || i2 % 3 == 0) {
+                sum2 += i2;
+            }
+            i2++;
+        }
+
+        console.log(sum2);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
