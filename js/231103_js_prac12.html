@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방명록 만들기</title>
+    <style>
+        * {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>방명록입니다.</p>
+    <b>작성자</b> <input type="text" id="user"> <br>
+    <b>내용</b> <input type="text" id="content"> <br>
+    <button onclick="upload()">작성</button> <br>
+
+    <table width="300px" cellspacing="0" cellpadding="5px" border="1px" id="visitors">
+        <tr>
+            <th>번호</th>
+            <th>작성자</th>
+            <th>내용</th>
+            <th>작성일</th>
+        </tr>
+    </table>
+
+    <script>
+        function upload() {
+            // input과 Date 객체로부터 표에 들어갈 내용을 가져옴
+            let user = document.getElementById('user');
+            let content = document.getElementById('content');
+            let today = new Date();
+
+            // ID를 통해 내용을 추가할 표를 가져옴
+            let visitors = document.getElementById('visitors');
+            
+            // 내용이 들어갈 4칸의 새 행을 생성
+            let tr = document.createElement('tr');
+            let tdNum = document.createElement('td');
+            let tdUser = document.createElement('td');
+            let tdContent = document.createElement('td');
+            let tdDate = document.createElement('td');
+
+            // 각각의 칸에 내용을 추가
+            tdNum.innerText = 1;
+            tdUser.innerText = user.value;
+            tdContent.innerText = content.value;
+            tdDate.innerText = today;
+
+            // tr을 table의 자식 요소로 추가하고 4개의 td를 tr의 자식 요소로 추가
+            visitors.append(tr);
+            tr.append(tdNum);
+            tr.append(tdUser);
+            tr.append(tdContent);
+            tr.append(tdDate);
+
+            // input칸 초기화
+            user.value = "";
+            content.value = "";
+        }
+    </script>
+</body>
+
+</html>

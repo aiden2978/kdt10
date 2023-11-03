@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기 만들기</title>
+</head>
+
+<body>
+    값1: <input type="text" id="num1"> <br>
+    값2: <input type="text" id="num2"> <br>
+    연산자: <input type="text" id="operator"> <br>
+    결과: <input type="text" id="result"> <br>
+    <button onclick="calc()">계산하기</button>
+    <button onclick="ini()">초기화</button>
+
+    <script>
+        function calc() {
+            // 값1, 값2와 연산자의 value와 결과창 input을 가져옴
+            let num1 = document.getElementById('num1').value;
+            let num2 = document.getElementById('num2').value;
+            let operator = document.getElementById('operator').value;
+            let result = document.getElementById('result');
+
+            // 값1, 값2를 숫자형으로 변환
+            num1 = Number(num1);
+            num2 = Number(num2);
+
+            // 연산자의 종류에 따라 결과값을 계산하여 반환
+            // 연산자가 사칙연산이 아니면 에러 반환
+            switch (operator) {
+                case "+":
+                    result.value = num1 + num2;
+                    break;
+                case "-":
+                    result.value = num1 - num2;
+                    break;
+                case "*":
+                    result.value = num1 * num2;
+                    break;
+                case "/":
+                    result.value = num1 / num2;
+                    break;
+                default:
+                    result.value = "ERROR";
+            }
+        }
+
+        function ini() {
+            // 각각의 input창의 value를 모두 공백으로 설정
+            let num1 = document.getElementById('num1');
+            let num2 = document.getElementById('num2');
+            let operator = document.getElementById('operator');
+            let result = document.getElementById('result');
+            num1.value = "";
+            num2.value = "";
+            operator.value = "";
+            result.value = "";
+        }
+    </script>
+</body>
+
+</html>

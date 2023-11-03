@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="green">1</div>
+        <div class="box" id="red">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+    <input type="text" name="userName">
+
+    <script>
+        // 요소 선택
+        // getElementById: id 속성값으로 선택
+        let dom1 = document.getElementById('green');
+        console.log(dom1);
+
+        // getElementsByClassName: class 속성값으로 선택
+        // HTMLCollection
+        let dom2 = document.getElementsByClassName('box');
+        console.log(dom2);
+        for (let i = 0; i < dom2.length; i++) {
+            console.log(dom2[i]);
+        }
+
+        // getElementsByTagName: 태그 이름 기준으로 선택
+        // HTMLCollection
+        let dom3 = document.getElementsByTagName('div');
+        console.log(dom3);
+
+        // getElementsByName: name 속성값으로 선택
+        // NodeList
+        let dom4 = document.getElementsByName('userName');
+        console.log(dom4);
+
+        // querySelector: 선택자를 이용해서 요소 선택
+        // CSS 선택자와 동일
+        // NodeList
+        let dom5 = document.querySelector('#red');
+        console.log(dom5);
+
+        let dom6 = document.querySelectorAll('.box');
+        console.log(dom6);
+    </script>
+</body>
+
+</html>
