@@ -18,7 +18,7 @@
     <b>내용</b> <input type="text" id="content"> <br>
     <button onclick="upload()">작성</button> <br>
 
-    <table width="300px" cellspacing="0" cellpadding="5px" border="1px" id="visitors">
+    <table width="500px" cellspacing="0" cellpadding="5px" border="1px" id="visitors">
         <tr>
             <th>번호</th>
             <th>작성자</th>
@@ -28,11 +28,15 @@
     </table>
 
     <script>
+        // 번호를 매기기 위해 count 정의
+        let count = 1;
+
         function upload() {
             // input과 Date 객체로부터 표에 들어갈 내용을 가져옴
             let user = document.getElementById('user');
             let content = document.getElementById('content');
             let today = new Date();
+            let todayString = today.getFullYear() + '.' + ((Number(today.getMonth()))+1) + '.' + today.getDate() + ' ' + today.getHours() + ':' + today.getMinutes();
 
             // ID를 통해 내용을 추가할 표를 가져옴
             let visitors = document.getElementById('visitors');
@@ -45,10 +49,10 @@
             let tdDate = document.createElement('td');
 
             // 각각의 칸에 내용을 추가
-            tdNum.innerText = 1;
+            tdNum.innerText = count;
             tdUser.innerText = user.value;
             tdContent.innerText = content.value;
-            tdDate.innerText = today;
+            tdDate.innerText = todayString;
 
             // tr을 table의 자식 요소로 추가하고 4개의 td를 tr의 자식 요소로 추가
             visitors.append(tr);
@@ -60,6 +64,8 @@
             // input칸 초기화
             user.value = "";
             content.value = "";
+
+            count += 1;
         }
     </script>
 </body>
