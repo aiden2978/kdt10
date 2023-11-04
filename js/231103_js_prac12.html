@@ -14,21 +14,21 @@
 
 <body>
     <p>방명록입니다.</p>
-    <b>작성자</b> <input type="text" id="user"> <br>
-    <b>내용</b> <input type="text" id="content"> <br>
+    <b>작성자</b> <input type="text" id="user" name="user" autocomplete="off"> <br>
+    <b>내용</b> <input type="text" id="content" name="content" size="50" autocomplete="off"> <br>
     <button onclick="upload()">작성</button> <br>
 
     <table width="500px" cellspacing="0" cellpadding="5px" border="1px" id="visitors">
         <tr>
             <th>번호</th>
             <th>작성자</th>
-            <th>내용</th>
+            <th width="200px">내용</th>
             <th>작성일</th>
         </tr>
     </table>
 
     <script>
-        // 번호를 매기기 위해 count 정의
+        // 번호를 매기기 위해 count 정의 (전역변수)
         let count = 1;
 
         function upload() {
@@ -36,13 +36,13 @@
             let user = document.getElementById('user');
             let content = document.getElementById('content');
             let today = new Date();
-            let todayString = today.getFullYear() + '.' + ((Number(today.getMonth()))+1) + '.' + today.getDate() + ' ' + today.getHours() + ':' + today.getMinutes();
+            let todayString = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate() + ' ' + today.getHours() + ' : ' + today.getMinutes();
 
             // ID를 통해 내용을 추가할 표를 가져옴
             let visitors = document.getElementById('visitors');
-            
+
             // 내용이 들어갈 4칸의 새 행을 생성
-            let tr = document.createElement('tr');
+            let trNew = document.createElement('tr');
             let tdNum = document.createElement('td');
             let tdUser = document.createElement('td');
             let tdContent = document.createElement('td');
@@ -54,18 +54,28 @@
             tdContent.innerText = content.value;
             tdDate.innerText = todayString;
 
+            // 실행할 때마다 번호 증가
+            count += 1;
+
             // tr을 table의 자식 요소로 추가하고 4개의 td를 tr의 자식 요소로 추가
-            visitors.append(tr);
-            tr.append(tdNum);
-            tr.append(tdUser);
-            tr.append(tdContent);
-            tr.append(tdDate);
+            // td를 tr에 추가한 후 tr을 table에 추가하는 역순이 일반적
+            trNew.append(tdNum);
+            trNew.append(tdUser);
+            trNew.append(tdContent);
+            trNew.append(tdDate);
+            visitors.append(trNew);
 
             // input칸 초기화
             user.value = "";
             content.value = "";
 
-            count += 1;
+            /* 초기화 다른 방법 예시
+            let inputs = document.querySelectorAll('input');
+            // NodelList 형태 -> index로 반복문
+            for (let i = 0, i < inputs.length; i++) {
+                input[i].value = '';    
+            }
+            */
         }
     </script>
 </body>

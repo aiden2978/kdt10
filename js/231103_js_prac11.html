@@ -18,18 +18,18 @@
     <script>
         function calc() {
             // 값1, 값2와 연산자의 value와 결과창 input을 가져옴
-            let num1 = document.getElementById('num1').value;
-            let num2 = document.getElementById('num2').value;
-            let operator = document.getElementById('operator').value;
+            let num1 = document.getElementById('num1');
+            let num2 = document.getElementById('num2');
+            let operator = document.getElementById('operator');
             let result = document.getElementById('result');
 
             // 값1, 값2를 숫자형으로 변환
-            num1 = Number(num1);
-            num2 = Number(num2);
+            num1 = Number(num1.value);
+            num2 = Number(num2.value);
 
             // 연산자의 종류에 따라 결과값을 계산하여 반환
             // 연산자가 사칙연산이 아니면 에러 반환
-            switch (operator) {
+            switch (operator.value) {
                 case "+":
                     result.value = num1 + num2;
                     break;
