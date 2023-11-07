@@ -11,10 +11,16 @@
     <title>내 스케줄</title>
 
     <style>
+        th {
+            height: 50px;
+            vertical-align: top;
+        }
+
         td {
             width: 100px;
             height: 100px;
             color: black;
+            vertical-align: top;
         }
 
         tr>td:first-child>p,
@@ -197,22 +203,38 @@
     </table>
 
     <script>
+        // click 이벤트 리스너 상의 this를 기억하기 위해 전역변수 설정
+        let target;
+
         $('td>p').on('click', function() {
             // input 값에 날짜 채워넣기
             $('#date').val(($(this).text()));
+
             // class를 추가함으로써 위치 저장
-            $(this).addClass('day');
+            // $(this).addClass('day');
+
+            // target에 this를 기억
+            target = this;
         })
 
         function writeSchedule() {
             let content = $('#content').val();
+
             // 아까 저장한 날짜의 class에 내용 요소 추가
-            $('.day').after(`<p>${content}</p>`);
+            // $('.day').after(`<p>${content}</p>`);
+
+            // 아까 target에 저장한 this를 불러와 요소 추가
+            $(target).parent().append(`<p>${content}</p>`);
+
             // 입력창 초기화
             $('#date').val('');
             $('#content').val('');
+
             // 다음 input 때 중복을 막기 위해 class 삭제
-            $('.day').removeClass();
+            // $('.day').removeClass();
+
+            // target 초기화
+            target = '';
         }
     </script>
 </body>
