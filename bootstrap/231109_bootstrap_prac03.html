@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹페이지 만들기</title>
+    <!-- CSS CDN 불러오기 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <!-- JS CDN 불러오기 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
+    <style>
+        @font-face {
+            font-family: 'JalnanGothic';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h1 {
+            font-family: 'JalnanGothic';
+        }
+    </style>
+</head>
+
+<body>
+    <header class="sticky-top bg-light">
+        <div>
+            <h1 class="text-center pt-5 pb-4">영화 추천</h1>
+        </div>
+
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item pt-3">
+                <a class="nav-link active bg-success" aria-current="page" href="#">현재 상영 중</a>
+            </li>
+            <li class="nav-item pt-3">
+                <a class="nav-link text-reset" href="#">국내영화</a>
+            </li>
+            <li class="nav-item pt-3">
+                <a class="nav-link text-reset" href="#">해외영화</a>
+            </li>
+        </ul>
+    </header>
+
+    <main class="mt-3">
+        <div class="row">
+            <div class="col-3 border p-2 d-flex justify-content-center">
+                <img src="https://www.kobis.or.kr/common/mast/movie/2023/11/thumb_x192/thn_65a860f7dfb04c449f4a0f0d3207edee.jpg"
+                    alt="더 마블스">
+            </div>
+            <div class="col-9 border p-2">
+                <p><b>제목</b> 더 마블스</p>
+                <p><b>개봉일자</b> 2023-11-08</p>
+                <p><b>상영시간</b> 104분</p>
+                <p><b>감독</b> 니아 다코스타</p>
+                <p><b>출연</b> 브리 라슨, 테요나 패리스, 이만 벨라니, 자웨 애쉬튼, 사무엘 L. 잭슨, 박서준</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3 border p-2 d-flex justify-content-center">
+                <img src="https://www.kobis.or.kr/common/mast/movie/2023/10/thumb_x192/thn_fc249dc7cd70422095a21310423d82c9.jpg"
+                    alt="그대들은 어떻게 살 것인가">
+            </div>
+            <div class="col-9 border p-2">
+                <p><b>제목</b> 그대들은 어떻게 살 것인가</p>
+                <p><b>개봉일자</b> 2023-10-25</p>
+                <p><b>상영시간</b> 123분</p>
+                <p><b>감독</b> 미야자키 하야오</p>
+                <p><b>출연</b> 스다 마사키, 시바사키 코우, 키무라 요시노, 기무라 타쿠야, 산토키 소마, 아이묭</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3 border p-2 d-flex justify-content-center">
+                <img src="https://www.kobis.or.kr/common/mast/movie/2023/10/thumb_x192/thn_1cca91cc0d3a4ac3bef00c217fe562de.jpg"
+                    alt="뉴 노멀">
+            </div>
+            <div class="col-9 border p-2">
+                <p><b>제목</b> 뉴 노멀</p>
+                <p><b>개봉일자</b> 2023-11-08</p>
+                <p><b>상영시간</b> 112분</p>
+                <p><b>감독</b> 정범식</p>
+                <p><b>출연</b> 최지우(현정), 이유미(현수), 최민호(훈 ), 표지훈(기진), 하다인(연진), 정동원(승진), 이문식(정훈), 이주실(규연), 이동규(창수), 황승언(혜연),
+                    김미화(송미 (진상 아줌마)), 이주우(효진), 류제윤(정호 )
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3 border p-2 d-flex justify-content-center">
+                <img src="https://www.kobis.or.kr/common/mast/movie/2023/10/thumb_x192/thn_3b4b88c6a73e4787bc68d912d49a0149.jpg"
+                    alt="소년들">
+            </div>
+            <div class="col-9 border p-2">
+                <p><b>제목</b> 소년들</p>
+                <p><b>개봉일자</b> 2023-11-01</p>
+                <p><b>상영시간</b> 123분</p>
+                <p><b>감독</b> 정지영</p>
+                <p><b>출연</b> 설경구, 유준상, 진경, 허성태, 염혜란</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
