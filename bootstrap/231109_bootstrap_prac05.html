@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전체 실습</title>
+    <!-- CSS CDN 불러오기 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <!-- JS CDN 불러오기 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+    <style>
+        @font-face {
+            font-family: 'JalnanGothic';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h1 {
+            font-family: 'JalnanGothic';
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="sticky-top bg-light">
+        <div>
+            <h1 class="text-center pt-5 pb-4">영화 추천</h1>
+        </div>
+
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item pt-3">
+                <a class="nav-link active bg-success" aria-current="page" href="#">현재 상영 중</a>
+            </li>
+            <li class="nav-item pt-3">
+                <a class="nav-link text-reset" href="#">국내영화</a>
+            </li>
+            <li class="nav-item pt-3">
+                <a class="nav-link text-reset" href="#">해외영화</a>
+            </li>
+        </ul>
+    </header>
+
+    <main class="position-relative">
+        <div class="position-absolute container mt-5" style="width: 100%; left: 10%;">
+            <div class="gallery">
+                <div>
+                    <img src="https://www.kobis.or.kr/common/mast/movie/2023/11/thumb_x192/thn_65a860f7dfb04c449f4a0f0d3207edee.jpg"
+                        alt="더 마블스">
+                </div>
+                <div>
+                    <img src="https://www.kobis.or.kr/common/mast/movie/2023/10/thumb_x192/thn_fc249dc7cd70422095a21310423d82c9.jpg"
+                        alt="그대들은 어떻게 살 것인가">
+                </div>
+                <div>
+                    <img src="https://www.kobis.or.kr/common/mast/movie/2023/10/thumb_x192/thn_1cca91cc0d3a4ac3bef00c217fe562de.jpg"
+                        alt="뉴 노멀">
+                </div>
+                <div>
+                    <img src="https://www.kobis.or.kr/common/mast/movie/2023/10/thumb_x192/thn_3b4b88c6a73e4787bc68d912d49a0149.jpg"
+                        alt="소년들">
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $('.gallery').slick({
+            infinite: true,
+            slidesToShow: 3,
+        });
+    });
+</script>
+
+</html>
